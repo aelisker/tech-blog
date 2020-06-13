@@ -15,7 +15,10 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const sess = {
   secret: process.env.DB_COOKIE,
-  cookie: {},
+  cookie: {
+    // set cookie to expire in one hour
+    maxAge: (1000 * 60 * 60)
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
