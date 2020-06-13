@@ -41,6 +41,14 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
+router.get('/create-post', (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('create-post');
+});
+
 router.get('/edit/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {
