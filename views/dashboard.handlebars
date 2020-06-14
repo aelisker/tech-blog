@@ -3,8 +3,7 @@
   <div class="row">
     {{#each posts as |post|}}
       <div class="col-11 mx-auto my-2">
-        {{> post-info post}}
-        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+        {{> post-info-dashboard post}}
       </div>
     {{/each}}
   </div> 

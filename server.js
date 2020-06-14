@@ -11,10 +11,17 @@ const hbs = exphbs.create({ helpers });
 
 require('dotenv').config();
 
+let cookieVal;
+if (process.env.JAWSDB_URL) {
+  cookieVal = 'SECRET_STRING';
+} else {
+  cookieVal = process.env.DB_COOKIE;
+};
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 const sess = {
-  secret: process.env.DB_COOKIE,
+  secret: cookieVal,
   cookie: {
     // set cookie to expire in one hour
     maxAge: (1000 * 60 * 60)

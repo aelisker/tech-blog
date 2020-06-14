@@ -28,7 +28,11 @@
   </div>
 </form>
 
-{{> comments post.comments }}
+  <div class="col-11 mx-auto my-2">
+    <div class="list-group">
+      {{> comments post.comments }}
+    </div>
+  </div>
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
