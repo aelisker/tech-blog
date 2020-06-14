@@ -2,9 +2,9 @@
   <div class="col-11 mx-auto my-2 mb-0">
     {{> post-info post }}
   </div>
-  <div class="col-11 mx-auto mb-0 my-0 px-0">
+  <div class="col-11 mx-auto mb-0 my-0">
     {{#if loggedIn}}
-      <form class="new-post-form comment-form input-group">
+      <form class="new-post-form comment-form input-group px-0">
         <textarea class="form-control" name="comment-body" rows="3"></textarea>
         <button type="submit" class="btn btn-outline-success">Add comment</button>
       </form>
