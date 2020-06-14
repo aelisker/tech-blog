@@ -46,7 +46,7 @@ router.get('/create-post', (req, res) => {
     res.redirect('/');
     return;
   }
-  res.render('create-post');
+  res.render('create-post', { loggedIn: req.session.loggedIn} );
 });
 
 router.get('/edit/:id', withAuth, (req, res) => {
