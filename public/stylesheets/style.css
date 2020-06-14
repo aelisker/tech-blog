@@ -21,6 +21,15 @@ footer {
   display: block;
 }
 
+.card-title {
+  margin-bottom: 0px;
+}
+
+.subtext {
+  font-size: small;
+  margin-bottom: 0px;
+}
+
 .navbar-light .navbar-nav .nav-link {
   padding: 6px !important;
 }

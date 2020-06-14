@@ -7,5 +7,11 @@ module.exports = {
       return `${word}s`;
     }
     return word;
+  },
+  isDashboard: () => {
+    console.log(this);
+    if (this.location.pathname === '/dashboard') {
+      console.log('yay');
+    }
   }
 }

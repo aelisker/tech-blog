@@ -1,9 +1,12 @@
 <div class="card">
-  <h3 class="card-header">{{title}}</h3>
+  <div class="card-header">
+    <h3 class="card-title">{{title}}</h3>
+    <p class="subtext">Posted by {{user.username}} on {{format_date created_at}}</p>
+  </div>
   <div class="card-body">
     <p class="card-text">{{post_content}}</p>
-    Posted by {{user.username}} on {{format_date created_at}}
-    |
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a> | 
+    {{#if isDashboard}}<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>{{/if}}
+    {{isDashboard}}
   </div>
 </div>
