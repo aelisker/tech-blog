@@ -8,10 +8,8 @@ module.exports = {
     }
     return word;
   },
-  isDashboard: () => {
+  isDashboard: (url) => {
     console.log(this);
-    if (this.location.pathname === '/dashboard') {
-      console.log('yay');
-    }
+    console.log(url);
   }
 }
