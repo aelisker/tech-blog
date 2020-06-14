@@ -14,7 +14,8 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 const sess = {
-  secret: process.env.DB_COOKIE,
+  // secret: process.env.DB_COOKIE,
+  secret: 'TEST_SECRET',
   cookie: {
     // set cookie to expire in one hour
     maxAge: (1000 * 60 * 60)
